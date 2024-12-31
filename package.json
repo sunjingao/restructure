@@ -6,7 +6,7 @@
   "main": "./dist/mo-front-end-util.js",
   "scripts": {
     "dev": "vite --mode dev",
-    "build": "vite build --mode doc"
+    "doc": "vite build --mode doc"
   },
   "dependencies": {
     "lodash-es": "^4.17.21",
