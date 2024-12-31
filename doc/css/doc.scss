@@ -1,0 +1,27 @@
+#app {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.doc-preview .control-tools .text {
+  // 解决文档中出现的横向滚动条
+  transform: none !important;
+}
+
+// 底部改为吸底布局
+.doc-preview .control-tools {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  background-color: #fff;
+}
+
+// 调整原有的样式对组件的a-table造成的样式影响
+.doc-preview {
+  .component {
+    table {
+      margin-bottom: 0;
+    }
+  }
+}

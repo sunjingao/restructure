@@ -1,0 +1,14 @@
+*.min.css
+
+# 其它类型文件
+*.js
+*.ts
+*.jpg
+*.woff
+
+# 测试和打包目录
+/dist/
+/doc/asset/
+
+# 引入的第三方包
+/doc/css/github-markdown-css.scss
