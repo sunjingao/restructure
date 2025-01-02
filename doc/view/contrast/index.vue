@@ -14,10 +14,10 @@
       </tr>
       <tr>
         <td class="p-[10px]">
-          <m-image :width="320" :src="getAssetURL('/public/png/old-size.png')" />
+          <m-image :width="320" :src="getPublicAssetURL('/png/old-size.png')" />
         </td>
         <td class="p-[10px]">
-          <m-image :width="320" :src="getAssetURL('/public/png/new-size.png')" />
+          <m-image :width="320" :src="getPublicAssetURL('/png/new-size.png')" />
         </td>
       </tr>
     </table>
@@ -54,10 +54,10 @@
       </tr>
       <tr>
         <td class="p-[10px]">
-          <m-image :width="320" :src="getAssetURL('/public/png/old-main.jpeg')" />
+          <m-image :width="320" :src="getPublicAssetURL('/png/old-main.jpeg')" />
         </td>
         <td class="p-[10px]">
-          <m-image :width="320" :src="getAssetURL('/public/png/new-main.png')" />
+          <m-image :width="320" :src="getPublicAssetURL('/png/new-main.png')" />
         </td>
       </tr>
     </table>
@@ -71,10 +71,10 @@
       </tr>
       <tr>
         <td class="p-[10px]">
-          <m-image :width="320" :src="getAssetURL('/public/png/old-page.png')" />
+          <m-image :width="320" :src="getPublicAssetURL('/png/old-page.png')" />
         </td>
         <td class="p-[10px]">
-          <m-image :width="320" :src="getAssetURL('/public/png/new-page.png')" />
+          <m-image :width="320" :src="getPublicAssetURL('/png/new-page.png')" />
         </td>
       </tr>
     </table>
@@ -88,10 +88,10 @@
       </tr>
       <tr>
         <td class="p-[10px]">
-          <m-image :width="320" :src="getAssetURL('/public/png/old-form.png')" />
+          <m-image :width="320" :src="getPublicAssetURL('/png/old-form.png')" />
         </td>
         <td class="p-[10px]">
-          <m-image :width="320" :src="getAssetURL('/public/png/new-form.png')" />
+          <m-image :width="320" :src="getPublicAssetURL('/png/new-form.png')" />
         </td>
       </tr>
     </table>
@@ -99,9 +99,7 @@
 </template>
 
 <script setup>
-function getAssetURL(image) {
-  return new URL(image, import.meta.url).href;
-}
+import { getPublicAssetURL } from '@/util/index.ts';
 </script>
 
 <style scoped></style>

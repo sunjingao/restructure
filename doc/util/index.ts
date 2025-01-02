@@ -1,4 +1,4 @@
-function getAssetURL(url) {
+function getPublicAssetURL(url) {
   if (import.meta.env.VITE_ENV === 'dev') {
     return location.href.slice(0, location.href.indexOf('#')) + url;
   } else {
@@ -6,4 +6,4 @@ function getAssetURL(url) {
   }
 }
 
-export { getAssetURL };
+export { getPublicAssetURL };

@@ -1,7 +1,9 @@
 <template>
-  <iframe class="w-[100%] h-[100%]" src="/public/pdf/step4.pdf" />
+  <iframe class="w-[100%] h-[100%]" :src="getPublicAssetURL('/pdf/step4.pdf')" />
 </template>
 
-<script setup></script>
+<script setup>
+import { getPublicAssetURL } from '@/util/index.ts';
+</script>
 
 <style scoped></style>
