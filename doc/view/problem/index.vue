@@ -6,7 +6,7 @@
     <h2>一：全部页面</h2>
     <p>因为对此平台一无所知，也无人交接，所以看了全部的页面，来了解相关功能，总结平台的问题。</p>
     <p>以下为全部页面内容。</p>
-    <iframe src="/public/pdf/all-page.pdf" class="w-[660px] h-[400px]" />
+    <iframe src="/pdf/all-page.pdf" class="w-[660px] h-[400px]" />
 
     <h2>二：整体架构</h2>
     <p>
