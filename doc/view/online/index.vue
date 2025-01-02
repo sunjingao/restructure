@@ -8,12 +8,12 @@
       因担心测试人员没有进行全量测试，从而影响业务的开发，所以找了十几位可以覆盖各个模块的业务人员进行内测。增加测试覆盖面。
     </p>
     <p>以下为与内测人员沟通群。</p>
-    <m-image class="mt-[10px]" :width="500" :src="getAssetURL('./asset/png/test.png')" />
+    <m-image class="mt-[10px]" :width="500" :src="getAssetURL('/public/png/test.png')" />
 
     <h2>二：上线</h2>
     <p>为防止测试不全面的情况，新老项目在线上并行两周。可以丝滑过度到最新架构。</p>
     <p>以下为正式上线前的公告邮件。</p>
-    <m-image :width="500" :src="getAssetURL('./asset/png/notice.png')" />
+    <m-image :width="500" :src="getAssetURL('/public/png/notice.png')" />
   </div>
 </template>
 

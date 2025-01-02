@@ -14,10 +14,10 @@
       </tr>
       <tr>
         <td class="p-[10px]">
-          <m-image :width="320" :src="getAssetURL('./asset/png/old-size.png')" />
+          <m-image :width="320" :src="getAssetURL('/public/png/old-size.png')" />
         </td>
         <td class="p-[10px]">
-          <m-image :width="320" :src="getAssetURL('./asset/png/new-size.png')" />
+          <m-image :width="320" :src="getAssetURL('/public/png/new-size.png')" />
         </td>
       </tr>
     </table>
@@ -32,12 +32,12 @@
       <tr>
         <td class="p-[10px]">
           <video width="320" controls>
-            <source src="./asset/mp4/old.mp4" type="video/mp4" />
+            <source src="/public/mp4/old.mp4" type="video/mp4" />
           </video>
         </td>
         <td class="p-[10px]">
           <video width="320" controls>
-            <source src="./asset/mp4/new.mp4" type="video/mp4" />
+            <source src="/public/mp4/new.mp4" type="video/mp4" />
           </video>
         </td>
       </tr>
@@ -54,10 +54,10 @@
       </tr>
       <tr>
         <td class="p-[10px]">
-          <m-image :width="320" :src="getAssetURL('./asset/png/old-main.jpeg')" />
+          <m-image :width="320" :src="getAssetURL('/public/png/old-main.jpeg')" />
         </td>
         <td class="p-[10px]">
-          <m-image :width="320" :src="getAssetURL('./asset/png/new-main.png')" />
+          <m-image :width="320" :src="getAssetURL('/public/png/new-main.png')" />
         </td>
       </tr>
     </table>
@@ -71,10 +71,10 @@
       </tr>
       <tr>
         <td class="p-[10px]">
-          <m-image :width="320" :src="getAssetURL('./asset/png/old-page.png')" />
+          <m-image :width="320" :src="getAssetURL('/public/png/old-page.png')" />
         </td>
         <td class="p-[10px]">
-          <m-image :width="320" :src="getAssetURL('./asset/png/new-page.png')" />
+          <m-image :width="320" :src="getAssetURL('/public/png/new-page.png')" />
         </td>
       </tr>
     </table>
@@ -88,10 +88,10 @@
       </tr>
       <tr>
         <td class="p-[10px]">
-          <m-image :width="320" :src="getAssetURL('./asset/png/old-form.png')" />
+          <m-image :width="320" :src="getAssetURL('/public/png/old-form.png')" />
         </td>
         <td class="p-[10px]">
-          <m-image :width="320" :src="getAssetURL('./asset/png/new-form.png')" />
+          <m-image :width="320" :src="getAssetURL('/public/png/new-form.png')" />
         </td>
       </tr>
     </table>

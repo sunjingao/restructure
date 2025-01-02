@@ -1,1 +1,0 @@
-import{_ as e}from"./vite-plugin-doc-preview-BQ6-yQ59.js";import{Q as c,Y as r}from"./@vue-CAGiurRl.js";const s={},t={class:"w-[100%] h-[100%]",src:"/pdf/step4.pdf"};function o(n,_){return c(),r("iframe",t)}const p=e(s,[["render",o]]);export{p as default};
