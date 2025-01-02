@@ -3,7 +3,7 @@
 为实现最终的目标，对重构过程进行了过程拆分。总共分为了五个部分。<br />
 因为想要优先看到最终的页面展示效果，所以把组件库实现放到了第一步，对整体最友好的方式应该是先调整架构。
 
-点击可查看按照整体规划实现的<a href="#/restructure/component">《组件库》</a>、<a href="#/restructure/framework">《代码架构》</a>、<a href="#/restructure/rule">《前端规范》</a>、<a href="#/step4">《步骤四》</a>
+点击可查看按照整体规划实现的<a href="#/restructure/component" target="_blank">《组件库》</a>、<a href="#/restructure/framework" target="_blank">《代码架构》</a>、<a href="#/restructure/rule" target="_blank">《前端规范》</a>、<a href="#/step4" target="_blank">《步骤四》</a>
 
 ## 一：组件库搭建及实现
 

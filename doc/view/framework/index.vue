@@ -6,7 +6,7 @@
     <iframe class="w-[100%] h-[500px]" :src="getPublicAssetURL('/pdf/new-old-project.pdf')" />
     <h3>代码介绍</h3>
     <div>
-      <a href="https://github.com/sunjingao/micro-management-system"
+      <a href="https://github.com/sunjingao/micro-management-system" target="_blank"
         >《点击查看基座与子项目的架构代码》</a
       >
     </div>
