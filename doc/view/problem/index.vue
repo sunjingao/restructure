@@ -42,8 +42,15 @@
 </template>
 
 <script setup>
-function getAssetURL(image) {
-  return new URL(image, import.meta.url).href;
+function getAssetURL(url) {
+  const path = location.href.slice(0, location.href.indexOf('/#')) + url;
+  console.log(import.meta.env.VITE_ENV, location.href.slice(0, location.href.indexOf('/#')));
+  console.log(111, path);
+  if (import.meta.env.VITE_ENV === 'dev') {
+    return new URL(url, import.meta.url).href;
+  } else {
+    return location.href.slice(0, location.href.indexOf('/#')) + url;
+  }
 }
 </script>
 

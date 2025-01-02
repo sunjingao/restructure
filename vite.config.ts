@@ -12,7 +12,7 @@ const DRIVE_LETTER_REGEX = /^[a-z]:/i
 
 const DEV_CONFIG = {
   config: {
-    base: './',
+    base: '/restructure/dist/',
     server: {
       host: '0.0.0.0',
       port: 6699,
@@ -39,7 +39,7 @@ const DEV_CONFIG = {
 
 const DOCS_CONFIG = {
   config: {
-    base: '/restructure/dist/',
+    base: './',
     build: {
       outDir: `dist`,
       rollupOptions: {
