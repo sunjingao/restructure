@@ -7,6 +7,9 @@ import stylelintPlugin from 'vite-plugin-stylelint';
 import markedPreview from 'vite-plugin-doc-preview'
 import { visualizer } from 'rollup-plugin-visualizer';
 
+const INVALID_CHAR_REGEX = /[\u0000-\u001F"#$&*+,:;<=>?[\]^`{|}\u007F]/g
+const DRIVE_LETTER_REGEX = /^[a-z]:/i
+
 const DEV_CONFIG = {
   config: {
     base: './',
@@ -39,6 +42,29 @@ const DOCS_CONFIG = {
     base: './',
     build: {
       outDir: `dist`,
+      rollupOptions: {
+        input: {
+          index: 'index.html'
+        },
+        // 静态资源分类打包
+        output: {
+          chunkFileNames: 'static/js/[name]-[hash].js',
+          entryFileNames: 'static/js/[name]-[hash].js',
+          assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
+          // TODO: 处理GitHub Pages 部署 _plugin-vue_export-helper.js 404
+          // https://github.com/rollup/rollup/blob/master/src/utils/sanitizeFileName.ts
+          sanitizeFileName(name: any) {
+            const match = DRIVE_LETTER_REGEX.exec(name)
+            const driveLetter = match ? match[0] : ''
+            return driveLetter + name.slice(driveLetter.length).replace(INVALID_CHAR_REGEX, '')
+          },
+          manualChunks(id: any) {
+            if (id.includes('node_modules')) {
+              return id.toString().match(/\/node_modules\/(?!.pnpm)(?<moduleName>[^\/]*)\//)?.groups!.moduleName ?? 'vender'
+            }
+          }
+        }
+      }
     },
   },
   plugins: [
@@ -62,7 +88,8 @@ const DOCS_CONFIG = {
       ],
       fix: true
     })
-  ]
+  ],
+
 }
 
 export default defineConfig(({mode}) => {
