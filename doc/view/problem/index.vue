@@ -43,8 +43,8 @@
 
 <script setup>
 function getAssetURL(url) {
-  const path = location.href.slice(0, location.href.indexOf('/index.html/#')) + url;
-  console.log(import.meta.env.VITE_ENV, location.href.slice(0, location.href.indexOf('/#')));
+  const path = location.href.slice(0, location.href.indexOf('/index.html')) + url;
+  console.log(import.meta.env.VITE_ENV);
   console.log(111, path);
   if (import.meta.env.VITE_ENV === 'dev') {
     return new URL(url, import.meta.url).href;
