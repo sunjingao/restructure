@@ -39,7 +39,7 @@ const DEV_CONFIG = {
 
 const DOCS_CONFIG = {
   config: {
-    base: './',
+    base: '/restructure/dist/',
     build: {
       outDir: `dist`,
       rollupOptions: {
@@ -48,9 +48,9 @@ const DOCS_CONFIG = {
         },
         // 静态资源分类打包
         output: {
-          chunkFileNames: 'static/js/[name]-[hash].js',
-          entryFileNames: 'static/js/[name]-[hash].js',
-          assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
+          // chunkFileNames: 'static/js/[name]-[hash].js',
+          // entryFileNames: 'static/js/[name]-[hash].js',
+          // assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
           // TODO: 处理GitHub Pages 部署 _plugin-vue_export-helper.js 404
           // https://github.com/rollup/rollup/blob/master/src/utils/sanitizeFileName.ts
           sanitizeFileName(name: any) {
@@ -58,11 +58,11 @@ const DOCS_CONFIG = {
             const driveLetter = match ? match[0] : ''
             return driveLetter + name.slice(driveLetter.length).replace(INVALID_CHAR_REGEX, '')
           },
-          manualChunks(id: any) {
-            if (id.includes('node_modules')) {
-              return id.toString().match(/\/node_modules\/(?!.pnpm)(?<moduleName>[^\/]*)\//)?.groups!.moduleName ?? 'vender'
-            }
-          }
+          // manualChunks(id: any) {
+          //   if (id.includes('node_modules')) {
+          //     return id.toString().match(/\/node_modules\/(?!.pnpm)(?<moduleName>[^\/]*)\//)?.groups!.moduleName ?? 'vender'
+          //   }
+          // }
         }
       }
     },
