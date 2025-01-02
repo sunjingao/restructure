@@ -13,7 +13,7 @@
       前端为以wujie、vue为框架的微前端项目，有1个基座，9个子项目，共计161个页面。子项目是以项目组进行划分的。
     </p>
     <p>以下是项目划分</p>
-    <m-image :width="660" :src="getAssetURL('/png/framework.png')" />
+    <m-image :width="660" :src="getAssetURL('./asset/png/framework.png')" />
 
     <h2>三：问题梳理</h2>
     <p>经过阅读相关代码，总结了当前项目在 展示、代码 上的问题。</p>

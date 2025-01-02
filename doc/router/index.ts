@@ -1,5 +1,5 @@
 import NProgress from 'nprogress';
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 
 export const ROUTERS = [
   {
@@ -93,7 +93,7 @@ export const REDIRECT = {
 };
 
 const router = createRouter({
-  history: createWebHistory('/restructure/dist'),
+  history: createWebHashHistory(),
   routes: [...ROUTERS, ...NOT_SHOW_IN_ROUTERS, REDIRECT],
   scrollBehavior() {
     document.getElementById('container').scrollTop = 0;
