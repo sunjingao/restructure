@@ -12,7 +12,7 @@ const DRIVE_LETTER_REGEX = /^[a-z]:/i
 
 const DEV_CONFIG = {
   config: {
-    base: '/restructure/dist/',
+    base: '/restructure/dist/index.html',
     server: {
       host: '0.0.0.0',
       port: 6699,

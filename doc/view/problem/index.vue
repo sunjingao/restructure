@@ -13,15 +13,15 @@
       前端为以wujie、vue为框架的微前端项目，有1个基座，9个子项目，共计161个页面。子项目是以项目组进行划分的。
     </p>
     <p>以下是项目划分</p>
-    <m-image :width="660" :src="getAssetURL('./asset/png/framework.png')" />
+    <m-image :width="660" :src="getAssetURL('/png/framework.png')" />
 
     <h2>三：问题梳理</h2>
     <p>经过阅读相关代码，总结了当前项目在 展示、代码 上的问题。</p>
     <h3>3.1 展示问题</h3>
     <p>以下为梳理出的展示问题 及 相关规则（最终规则是根据自身经验确定的，集成到了组件库中）</p>
     <div class="flex;">
-      <iframe src="/public/pdf/page-problem.pdf" class="w-[400px] h-[400px]" />
-      <iframe src="/public/pdf/page-solution.pdf" class="w-[400px] h-[400px] ml-[10px]" />
+      <iframe :src="getAssetURL('/pdf/page-problem.pdf')" class="w-[400px] h-[400px]" />
+      <iframe :src="getAssetURL('/pdf/page-solution.pdf')" class="w-[400px] h-[400px] ml-[10px]" />
     </div>
     <h3>3.2 代码问题</h3>
     <p>
@@ -42,16 +42,7 @@
 </template>
 
 <script setup>
-function getAssetURL(url) {
-  const path = location.href.slice(0, location.href.indexOf('/index.html')) + url;
-  console.log(import.meta.env.VITE_ENV);
-  console.log(111, path);
-  if (import.meta.env.VITE_ENV === 'dev') {
-    return new URL(url, import.meta.url).href;
-  } else {
-    return path;
-  }
-}
+import { getAssetURL } from '@/util/index.ts';
 </script>
 
 <style scoped></style>
